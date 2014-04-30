@@ -1,0 +1,29 @@
+<div class="center hero-unit" >
+  <%= image_tag("veg_face.jpg", alt: "vegetable face") %>
+  <h1>What to Eat</h1>
+
+
+  <h3>
+    A Recipe Database.
+  </h3>
+
+  <div class="form-box center" >
+
+    <%= form_tag( '/public/sres', :method => "get", class: "well form-search center" ) do  %>
+
+      <%= text_field_tag(:search, params[:search], {type: "text", class: "input search-query tips", "data-toggle" => "tooltip", "data-placement" => "bottom", title: "Enter the name of a food you would like to eat.", autofocus: true }) %>
+
+      <button id="search-button" type="submit" class="btn btn-default">
+	<span class="glyphicon glyphicon-search"></span>
+      </button>
+ </br>
+ <% if flash[:danger] %>
+   <div class="alert alert-danger alert-dismissable">
+     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+     <%= flash[:danger] %>
+   </div>
+ <% end  %>
+  </div>
+    <% end  %>
+</div>
+

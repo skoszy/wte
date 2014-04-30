@@ -1,0 +1,16 @@
+<% subjects ||= [] %>
+<ul >
+<% subjects.each do |subject| %>
+  <li class="cat">
+    <%= subject.name %>
+    <ul>
+    <% subject.pages.visible.sorted.each do |page| %>
+      <li class="rec" role="presentation"><%= link_to_unless_current(page.name,
+    {:action => 'show', :permalink => page.permalink}, {role:
+    "menuitem", tabindex: "-1"}) %></li>
+    <% end %>
+    </ul>
+  </li>
+  <% end %>
+
+</ul>

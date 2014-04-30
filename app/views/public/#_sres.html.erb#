@@ -1,0 +1,11 @@
+<% @results.each do |result| %>
+  <div class="section">
+    <% case result.content_type %>
+    <% when 'HTML' %>
+    <%= raw(sanitize(result.content, :tags => ['strong', 'em', 'a'])) %>
+    <% when 'text' %>
+    <p><%= result.content %></p>
+<% end %>
+  </div>
+  <% end %>
+

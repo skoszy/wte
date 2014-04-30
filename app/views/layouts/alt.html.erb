@@ -1,0 +1,14 @@
+    <!-- -
+    <div id="navigation">
+      <div id="search-box">
+	<%= form_tag( '/public/sres', :method => "get") do  %>
+	  <!--   <%= label_tag(:search, "Search for:") %> -->
+	  <%= text_field_tag(:search, params[:search]) %>
+	  <%= submit_tag("Search", :name => nil ) %>
+        <% end  %>
+      </div>
+   
+      <div id="menu">
+        <%= render(:partial => 'layouts/navigation', :locals => {:subjects => @subjects}) %>
+      </div>
+    </div>

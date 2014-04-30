@@ -1,0 +1,177 @@
+@import "bootstrap"; 
+
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+
+/* universal */
+
+
+#search-button {
+    background-color: #428bca;
+    color: white;
+}
+.form-box {
+    max-width: 631px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.navbar {
+    height: 50px;
+
+    #logo {
+	float: left;
+	margin-left: 10px;
+	font-size: 1.7em;
+	color: white;
+	//	text-transform: uppercase;
+	letter-spacing: -1px;
+	padding-top: 9px;
+	font-weight: bold;
+	line-height: 1;
+
+	&:hover {
+	    color: #999999;
+	    text-decoration: none;
+	}
+    }
+  #drop_men  {
+
+	color: $grayMediumLight;
+	float: left;
+	margin-left: 10px;
+	font-size: 1.9em;
+	//	text-transform: uppercase;
+	letter-spacing: 0px;
+	padding-top:3px;
+	font-weight: bold;
+	line-height: 1.5;
+
+	&:hover {
+	    color: #999999;
+	}
+    }
+
+   .dropdown-menu {
+       width: 220px;
+   }
+    .cat {
+	font-weight: bold;
+	text-decoration: none;
+	list-style-type: none;
+	color: black;
+    }
+
+    .rec {
+	font-weight: normal;
+	text-decoration: none;
+	list-style-type: none;
+	a {
+	    text-decoration: none;
+	    font-size: 0.9em;
+	    text-align: left;
+	    color: black;
+	    &:hover {
+		font-size: 1.0em;
+		text-decoration: none;
+	    }
+	}
+    }
+}
+
+html { height: 100%; width: 100%;  overflow-y: scroll; }
+body { width: 100%; min-width: 980px; height: 100%; margin: 0; padding-top: 100px;
+       padding: 0; font: 14px Verdana,Lucida,Arial,Helvetica,sans-serif; color: #332318; }
+p, td, ul, ol, li, dl, dt, dd {
+    font-family: Verdana,Lucida,Arial,Helvetica,sans-serif; }
+
+section {
+    overflow: auto;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.center {
+    text-align: center;
+    h1 {
+	margin-bottom: 10px;
+    }
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1;
+}
+
+h1 {
+    font-size: 6em;
+    font-weight: bold;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: black;
+}
+
+h2 {
+    font-size: 4.2em;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+h3 {
+    font-size: 1.2em;
+    text-align: center;
+    color: black;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.7em;
+}
+
+
+
+/* footer */
+
+footer {
+    margin-top: 45px;
+    padding-top: 5px;
+    border-top: 1px solid $grayMediumLight;
+    color: $gray-light;
+    a {
+	color: $gray;
+	&:hover {
+	    color: $gray-darker;
+	}
+    }
+    small {
+	float: left;
+	margin-left: 40px;
+    }
+    ul {
+	float: right;
+	list-style: none;
+	li {
+	    float: left;
+	    margin-right: 40px;
+	}
+    }
+}
+
+#main {
+    padding-top: 100px;
+}
+
+.section {
+    padding-top: 40px;
+    max-width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1.2em;
+}
