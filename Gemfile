@@ -6,7 +6,9 @@ gem 'bootstrap-sass'
 gem 'sprockets'
 
 # Use mysql as the database for Active Record
-gem 'mysql2'
+group :development, :test do
+  gem 'mysql2'
+end
 
 # use Acts as List 
 gem "acts_as_list", "~> 0.4.0"
@@ -47,12 +49,16 @@ gem 'bcrypt-ruby'
 # gem 'capistrano', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+# Gem 'debugger', group: [:development, :test]
 
 gem 'sunspot_rails'
 gem 'sunspot_solr'
 
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
 
 
